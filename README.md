@@ -41,14 +41,14 @@ $$
 The equations used in this project involve the following symbols:
 - **[H]** – global stiffness matrix, representing the conductive properties of the elements  
 - **[C]** – global capacity matrix, representing the heat storage in the elements  
-- **{$t_0$}, {$t_1$}** – vectors of nodal temperatures at the current ($t_0$) and next ($t_1$) time steps  
+- **$\{t_0\}$, $\{t_1\}$** – vectors of nodal temperatures at the current ($t_0$) and next ($t_1$) time steps
 - **{P}** – global load vector, representing heat fluxes or sources applied to the system  
 - **Δτ** – time step of the transient simulation  
 - **k** – thermal conductivity of the material  
 - **c** – specific heat capacity of the material  
 - **ρ** – density of the material  
 - **N** – matrix of shape functions for the FEM elements  
-- **$\frac{\partial N}{\partial x}$, $\frac{\partial N}{\partial y}$** – derivatives of shape functions with respect to spatial coordinates  
+- **$\frac{\partial N}{\partial x}, \frac{\partial N}{\partial y}$** – derivatives of shape functions with respect to spatial coordinates  
 - **α** – convection coefficient at the boundary  
 - **$t_∞$** – ambient temperature outside the domain  
 - **V** – volume of the domain (for volume integrals)  
@@ -162,13 +162,6 @@ Below are representative snapshots of temperature distribution over time for dif
 <div align="center">
     <img src="./readme_img/solid_chart.png" width="50%">
 </div>
-
-## Technologies
-
-- C++
-- Finite Element Method (FEM)
-- Numerical integration (Gauss quadrature)
-- ParaView (visualization)
 
 ## Additional Resources
 
