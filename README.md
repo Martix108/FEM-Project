@@ -16,14 +16,12 @@ Where the individual expressions are calculated as follows:
 
 $$
 [H] = \int_V k \left(
-\left\{ \frac{\partial \{N\}}{\partial x} \right\}
-\left\{ \frac{\partial \{N\}}{\partial x} \right\}^T
+\frac{\partial N}{\partial x} \frac{\partial N^T}{\partial x}
 +
-\left\{ \frac{\partial \{N\}}{\partial y} \right\}
-\left\{ \frac{\partial \{N\}}{\partial y} \right\}^T
-\right) \, dV
+\frac{\partial N}{\partial y} \frac{\partial N^T}{\partial y}
+\right) dV
 +
-\int_S \alpha \{N\} \{N\}^T \, dS
+\int_S \alpha N N^T \, dS
 $$
 
 $$
