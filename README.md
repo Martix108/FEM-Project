@@ -94,19 +94,19 @@ Below is a visualization of the mesh structure (nodes and elements) used in the 
 
 <br>
 Test1_4_4:
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div align="center">
     <img src="./readme_img/Test1_4_4_grid.png" width="25%">
     <img src="./readme_img/Test1_4_4_vis.png" width="25%">
 </div>
 
 Test2_4_4_MixGrid:
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div align="center">
     <img src="./readme_img/Test2_4_4_grid.png" width="25%">
     <img src="./readme_img/Test2_4_4_vis.png" width="25%">
 </div>
 
 Test3_31_31_Square:
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div align="center">
     <img src="./readme_img/Test3_31_31_grid.png" width="25%">
     <img src="./readme_img/Test3_31_31_vis.png" width="25%">
 </div>
@@ -133,34 +133,34 @@ This demonstrates how FEM can be used in **material engineering and construction
 Below are representative snapshots of temperature distribution over time for different brick configurations.
 
 #### Small cavities (time 60, 1000, 2000 seconds):
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div align="center">
     <img src="./readme_img/small_cavities_1.png" width="25%">
     <img src="./readme_img/small_cavities_2.png" width="25%">
     <img src="./readme_img/small_cavities_3.png" width="25%">
 </div>
-<div style="display: flex; justify-content: center;">
+<div align="center">
     <img src="./readme_img/small_cavities_chart.png" width="50%">
 </div>
 
 #### Large cavities (time 60, 1000, 2000 seconds):
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div align="center">
     <img src="./readme_img/large_cavities_1.png" width="25%">
     <img src="./readme_img/large_cavities_2.png" width="25%">
     <img src="./readme_img/large_cavities_3.png" width="25%">
 </div>
 
-<div style="display: flex; justify-content: center;">
+<div align="center">
     <img src="./readme_img/large_cavities_chart.png" width="50%">
 </div>
 
 #### Solid (time 60, 1000, 2000 seconds):
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div align="center">
     <img src="./readme_img/solid_1.png" width="25%">
     <img src="./readme_img/solid_2.png" width="25%">
     <img src="./readme_img/solid_3.png" width="25%">
 </div>
 
-<div style="display: flex; justify-content: center;">
+<div align="center">
     <img src="./readme_img/solid_chart.png" width="50%">
 </div>
 
