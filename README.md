@@ -4,7 +4,13 @@
 
 ## Project Overview
 
-This project implements a 2D transient heat simulation using the finite Element Method (FEM).
+This project implements a 2D transient heat simulation using the finite Element Method (FEM), with a focus on realistic physical modeling. Key aspects include:
+- **Realistic physical simulation**: models heat transfer in heterogeneous materials (e.g., bricks with air cavities)  
+- **Time-dependent FEM implementation**: solves transient heat conduction using configurable time steps and material properties  
+- **Numerical methods from scratch**: includes Gauss quadrature integration
+- **Engineering applicability**: supports boundary conditions, material variation, and outputs suitable for visualization in ParaView  
+
+<br>
 
 The solver computes temperature distribution over time by solving the following system:
 
@@ -32,35 +38,29 @@ $$
 [C] = \int_V c \rho \{N\} \{N\}^T \, dV
 $$
 
+The equations used in this project involve the following symbols:
+- **[H]** – global stiffness matrix, representing the conductive properties of the elements  
+- **[C]** – global capacity matrix, representing the heat storage in the elements  
+- **{$t_0$}, {$t_1$}** – vectors of nodal temperatures at the current ($t_0$) and next ($t_1$) time steps  
+- **{P}** – global load vector, representing heat fluxes or sources applied to the system  
+- **Δτ** – time step of the transient simulation  
+- **k** – thermal conductivity of the material  
+- **c** – specific heat capacity of the material  
+- **ρ** – density of the material  
+- **N** – matrix of shape functions for the FEM elements  
+- **$\frac{\partial N}{\partial x}$, $\frac{\partial N}{\partial y}$** – derivatives of shape functions with respect to spatial coordinates  
+- **α** – convection coefficient at the boundary  
+- **$t_∞$** – ambient temperature outside the domain  
+- **V** – volume of the domain (for volume integrals)  
+- **S** – surface area of the boundary (for surface integrals)  
+
+<br>
+
 The implementation includes:
 - Custom FEM grid handling (nodes & elements)
 - Numerical integration using Gauss quadrature
 - Assembly of global matrices (H, C, P)
 - Time-dependent simulation
-- Export for visualization (ParaView)
-
-## Why this project is interesting
-
-Unlike typical academic implementations, this project:
-- Simulates **real phisical processes** (heat transfer)
-- Handles **time-dependent FEM equations**
-- Implements **numerical integration (Gauss quadrature) from scratch**
-- Solves **large systems of equations**
-- Includes a **real engineering case study** (heat transfer in bricks with air cavities)
-
-<br>
-
-It demonstrates understanding of:
-- Numerical methods
-- Linear algebra in practice
-- Computational physics
-- Performance vs accuracy trade-offs
-
-## Core Features
-
-- 2D FEM grid (4-node elements)
-- Transient heat transfer simulation
-- Support for different materials (e.g. brick vs air)
 - Configurable simulation parameters:
   - time step
   - total simulation time
@@ -68,7 +68,7 @@ It demonstrates understanding of:
   - density
   - specific heat
 - Boundary conditions (convection)
-- Export to ParaView for visualization
+- Export for visualization (ParaView)
 
 ## Core Structure
 
@@ -92,20 +92,19 @@ Below is a visualization of the mesh structure (nodes and elements) used in the 
 - 50 seconds for the first two meshes
 - 20 seconds for the third mesh
 
-<br>
-Test1_4_4:
+#### Test1_4_4:
 <div align="center">
     <img src="./readme_img/Test1_4_4_grid.png" width="25%">
     <img src="./readme_img/Test1_4_4_vis.png" width="25%">
 </div>
 
-Test2_4_4_MixGrid:
+#### Test2_4_4_MixGrid:
 <div align="center">
     <img src="./readme_img/Test2_4_4_grid.png" width="25%">
     <img src="./readme_img/Test2_4_4_vis.png" width="25%">
 </div>
 
-Test3_31_31_Square:
+#### Test3_31_31_Square:
 <div align="center">
     <img src="./readme_img/Test3_31_31_grid.png" width="25%">
     <img src="./readme_img/Test3_31_31_vis.png" width="25%">
